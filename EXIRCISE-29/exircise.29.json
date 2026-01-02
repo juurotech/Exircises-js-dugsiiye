@@ -1,0 +1,17 @@
+{
+  "name": "abdi",
+  "id": "21",
+  "city": "mogdisho",
+  "oders": [
+    {
+      "id": 21,
+      "product": "earphone",
+      "quantity": "21"
+    },
+    {
+      "id": 32,
+      "product": "maose",
+      "quantity": "100"
+    }
+  ]
+}
