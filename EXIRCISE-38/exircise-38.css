@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: white;
+    z-index: 1000;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    line-height: 60px;
+}
+
+.navbar-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    padding: 0 10px;
+}
+
+.navbar-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    line-height: 60px;
+    transition: background 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: #444;
+}
+
+/* ===== TOGGLE ===== */
+.toggle-button {
+    position: absolute;
+    top: 18px;
+    right: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 8% 0;
+    text-align: center;
+    color: white;
+}
+
+.home-section { background: rgb(245,50,20); }
+.about { background: rgb(31,31,243); }
+.services { background: teal; }
+.portfolio-section { background: purple; }
+.blog-section { background: green; }
+.careers-section { background: brown; }
+.contacts-section { background: black; }
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px){
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: 0.4s;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links a {
+        padding: 15px 0;
+        line-height: normal;
+    }
+
+    /* ACTIVE */
+    .navbar.active .navbar-links {
+        max-height: 500px;
+        opacity: 1;
+    }
+
+    /* Hamburger → X */
+    .navbar.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .navbar.active .bar:nth-child(1){
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .navbar.active .bar:nth-child(3){
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
