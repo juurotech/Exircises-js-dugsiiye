@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Language Translator</title>
+  <link rel="stylesheet" href="exircise-39.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Language Translator</h2>
+
+  <label>From:</label>
+  <select id="fromLang">
+    <option value="en">English</option>
+    <option value="so">Somali</option>
+  </select>
+
+  <label>To:</label>
+  <select id="toLang">
+    <option value="so">Somali</option>
+    <option value="en">English</option>
+  </select>
+
+  <label>Text to Translate:</label>
+  <textarea id="inputText" placeholder="Type text..."></textarea>
+
+  <button onclick="translateText()">Translate</button>
+
+  <h3>Translated Text:</h3>
+  <div id="outputText"></div>
+</div>
+
+<script src="exircise-39.js"></script>
+</body>
+</html>
+
+
